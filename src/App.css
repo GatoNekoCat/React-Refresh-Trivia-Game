@@ -1,38 +1,53 @@
-.App {
+
+html, body {
+  height: 100%;
+  background-color: #FC9E44;
+}
+body {
+  color: #FC9E44;
   text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+#play-field button {
+  margin: auto;
+  font-family: 'Bangers', cursive;
+
+}
+p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  color: #FC9E44;
+  background-color: #231A15;
+  font-family: 'Monoton', cursive;
+  letter-spacing: 3px;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-button {
+  width: 40%;
+  
 }
+/* img {
+  margin-left: 10vh;
+  margin-right: 10vh;
+  height: 100%;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+}  */
+.container.jumbotron {
+  background-color: #231A15;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#dude {
+  font-size: 36px;
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#askQuestion { 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
 }

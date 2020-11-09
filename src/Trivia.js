@@ -1,18 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-//Trivia Game React Component
+/* this is the Trivia Game component. It will contain the list
+ of trivia questions and a function to load and return
+a question, adding used questions to a list and removing them from
+the pool of available questions.
+ */
 const Trivia = ()=> { 
 
        
     //Trivia Game Object
     const triviaGame = {
-    
-    score: 0,
-    highscore: 0,
-    answer: 0,
 
-
-    //Trivia game questions, may move these soon
+    //Trivia game questions
     triQ: [
         {
             q:"what alias does Jeffery Lebowski use?",

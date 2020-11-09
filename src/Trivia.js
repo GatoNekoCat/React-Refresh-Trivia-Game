@@ -1,5 +1,7 @@
+import React from 'react';
+
 //Trivia Game React Component
-function Trivia() { 
+const Trivia = ()=> { 
 
        
     //Trivia Game Object
@@ -47,7 +49,7 @@ function Trivia() {
     console.log(triviaGame);
     return (
         <div className="trivia">
-            <h1>Where is my mind?</h1>            
+            <button className='start-button button-primary'>Where is my mind?</button>            
         </div>
       );
       

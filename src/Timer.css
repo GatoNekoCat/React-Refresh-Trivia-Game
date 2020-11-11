@@ -6,7 +6,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     font-family: 'Bangers', cursive;
-    color: white;
+    color:#231A15;
   }
   
   .time {
@@ -23,7 +23,8 @@
     font-family: cursive;
     font-size: .8rem;
     border-style: groove;
-    
+    color:#231A15;
+    background-color: #d4c592;
   }
   
   .button:focus {
@@ -31,19 +32,13 @@
   }
   
   .button-primary:hover {
-    background-color: #2641d4;
-    border: 1px solid #1b1f2b;
+    background-color: #ff9737;
+    border: 1px solid #4d4c4c;
   }
   
   .button-primary-active {
-    background-color: #3151ff;
-    border: 1px solid #152684;
-    color: white;
-  }
-  
-  .button-primary-inactive {
-    background-color: #3151ff;
-    border: 1px solid #152684;
-    color: white;
+    background-color: #ff9737;
+    border: 1px solid #4d4c4c;
+    color:#673c6d;
   }
   

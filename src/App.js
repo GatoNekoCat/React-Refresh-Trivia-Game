@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          The Big Lebowski Trivia Game. 
-        </p>
+        <h1>
+          The Big Lebowski<br></br> Trivia Game 
+        </h1>
       </header>
     <Trivia />
     <Timer />

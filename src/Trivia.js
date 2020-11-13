@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import Timer from './Timer';
+
 
 /* this is the Trivia Game component. It will contain the list
  of trivia questions and a function to load and return
@@ -74,14 +76,15 @@ const Trivia = ()=> {
     };
     
     return (
-        <div className="trivia">
+		<div className="trivia">
+		<Timer />
            {showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}</div>
 			) : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<p>Question {curQ + 1}/{questions.length} </p>
+							<span>Question {curQ + 1}/{questions.length} </span>
 						</div>
 						<div className='question-text'><h1>{questions[curQ].questionText}</h1></div>
 					</div>

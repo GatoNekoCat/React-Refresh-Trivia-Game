@@ -1,63 +1,95 @@
+.app-header {
+  background-color: #231A15;
+  letter-spacing: 1ch;
+  box-shadow: 15px 15px 42px 0px #991783bf;
+  text-shadow: .04rem .15rem .5rem #991783bf;
+}
+.app-header h1 {
+  animation: fadeIn ease 8s;
+  -webkit-animation: fadeIn ease 8s;
+  }
+  
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 body {
-  height: 100%;
+  margin: 0;
   background-color: #FC9E44;
   color: #FC9E44;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-}
-h1 {
-  font-size: 200%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2vh;
-  color: #FC9E44;
-  background-color: #231A15;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Monoton', cursive;
-  letter-spacing: 4px;
-  padding: 2px;
-
 }
-p {
-  font-size: 100%;
+
+.trivia {
   background-color: #231A15;
-  font-family: cursive;
+  width: 80%;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  text-shadow: .04rem .15rem .5rem #991783bf;
 
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 40%;
-}
-.fade-in {
-animation: fadeIn ease 3s;
--webkit-animation: fadeIn ease 3s;
--moz-animation: fadeIn ease 3s;
--o-animation: fadeIn ease 3s;
--ms-animation: fadeIn ease 3s;
-}
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
+
+  display: flex;
+  justify-content: space-evenly;
 }
 
-@-moz-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
 }
 
-@-webkit-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
+/* Left Section: Timer & Question */
+.question-section {
+  width: 100%;
+  position: relative;
 }
-
-@-o-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
+.question-count span {
+  font-size: 28px;
 }
-
-@-ms-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
+.question-text {
+  margin-bottom: 15px;
+  font-family: 'Monoton';
+}
+.timer-text {
+  background: rgb(230,153,12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+/* Right section: Answer buttons */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

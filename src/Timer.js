@@ -7,6 +7,7 @@ const Timer = ()=> {
   //State
   const[seconds, setSeconds] = useState(0);
   const[isActive, setIsActive] = useState(false);
+  const[timeOver, setTimeOver] = useState(false);
 
 //Toggle the isActive state
   function toggle() {
@@ -19,13 +20,19 @@ const Timer = ()=> {
   setIsActive(false);
 }
 
-//Using the useEffect react hook to detect when isActive is true and then start the timer
+//Using the useEffect react hook to detect when isActive 
+//  is true and then start the timer which will add 
+//   seconds to our state.
   useEffect(()=>{
     let interval = null;
     if (isActive) {
-      interval = setInterval(()=> {
-        setSeconds(seconds => seconds+1);
-      }, 1000);
+      if (timeOver) {
+        toggle();
+      } else {
+        interval = setInterval(()=> {
+          setSeconds(seconds => seconds+1);
+        }, 1000);
+      }
     } else if (!isActive && seconds !== 0) {
       clearInterval(interval);
     }
@@ -36,16 +43,8 @@ const Timer = ()=> {
 
   return(
     <div className='timerApp'>
-      <div className='time'>
-        {seconds}s
-      </div>
-      <div className='row'>
-        <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
-          {isActive ? 'Pause' : 'Start'}
-        </button>
-        <button className='button' onClick={reset}>
-          Reset
-        </button>
+      <div className='timer-text'>
+        {seconds}'s
       </div>
     </div>
   )
